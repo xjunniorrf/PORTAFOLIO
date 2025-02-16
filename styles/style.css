@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa la fuente de Google Fonts */
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22d4fd;
+
+    --fuente-montserrat: "Montserrat", sans serif;
+    --fuente-krona: "Krona One", sans serif;
+    --color-hover: #272727;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-primario);
+    /* Color de fondo */
+    color: var(--color-secundario);
+    /* Color de la letra */
+    /*height: 100vh;
+    /* Altura del body */
+    box-sizing: border-box;
+    /* Caja de borde */
+}
+
+.header {
+    padding: 2% 0% 0% 12%;
+    /* Relleno */
+    /*Superior (top): 2% establece el espacio interior superior del elemento en 2% de la altura del contenedor principal.
+
+    Derecha (right): 0% establece el espacio interior derecho del elemento en 0% (sin espacio adicional).
+    
+    Inferior (bottom): 0% establece el espacio interior inferior del elemento en 0% (sin espacio adicional).
+    
+    Izquierda (left): 12% establece el espacio interior izquierdo del elemento en 12% del ancho del contenedor principal. */
+
+
+}
+
+.header_menu {
+    display: flex;
+    /* Flexbox */
+    gap: 80px;
+    /* Espacio entre los elementos */
+}
+
+.header_menu_link {
+    font-family: var(--fuente-montserrat);
+    /* Fuente */
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+
+}
+
+.presentacion {
+    display: flex;
+    /* Flexbox */
+    align-items: center;
+    /* Alinea los elementos */
+    padding: 6% 12%;
+    /* Relleno */
+    /* primer elemento: vertical, segundo elemento: horizontal */
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+    gap: 82px;
+}
+
+.presentacion_contenido {
+    width: 50%;
+    /* Ancho del contenedor */
+    display: flex;
+    /* Flexbox */
+    flex-direction: column;
+    /* Dirección de los elementos */
+    gap: 40px;
+    /* Espacio entre los elementos */
+
+}
+
+.presentacion_contenido_titulo {
+    font-size: 2.25rem;
+    /* Tamaño de la letra */
+
+    /* Margen inferior */
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titulo-destaque {
+    color: var(--color-terciario);
+    /* Color de la letra */
+}
+
+.presentacion_contenido_texto {
+    font-size: 1.5rem;
+    /* Tamaño de la letra */
+    line-height: 1.5;
+    /* Altura de la línea */
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion_enlaces {
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+    flex-direction: column;
+    align-items: center;
+    /* Alinea los elementos */
+    gap: 32px;
+    /* Espacio entre los elementos */
+
+}
+
+.presentacion_enlace_subtitulo {
+    font-size: 1.5rem; /*Para que se adapta a cualquier resolucion utilizamos rem
+    /* Tamaño de la letra */
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    /* Grosor de la letra */
+}
+
+.presentacion_enlaces_link {
+    width: 50%;
+    /* Ancho del enlace */
+    text-align: center;
+    /* Alineación del texto */
+    padding: 21.5px 0;
+    /* Relleno */
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    /* Fuente */
+    font-size: 1.5rem;
+    /* Tamaño de la letra */
+    font-weight: 600;
+    /* Grosor de la letra */
+    text-decoration: none;
+    /* Decoración del texto */
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    /* Alineación del texto */
+    gap: 10px;
+
+
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+/* Efecto hover, el efecto al pasar el cursor a los botones*/
+.presentacion_enlaces_link:hover {
+    background-color: var(--color-hover);
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    text-align: center;
+    padding: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px){
+
+    .header{
+        padding: 10%;
+        
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        padding: 5%;
+        flex-direction: column-reverse;
+
+    }
+    .presentacion_contenido{
+        width: auto;
+    }
+
+}
